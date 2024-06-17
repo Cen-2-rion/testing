@@ -1,11 +1,9 @@
 // функция жизненного состояния игрока
-export function getHealthStatus(character) {
-
+export default function getHealthStatus(character) {
   if (character.health > 50) {
     return 'healthy';
-  } else if (character.health < 15) {
+  } if (character.health < 15) {
     return 'critical';
-  } else {
-    return 'wounded';
   }
+  return 'wounded';
 }
